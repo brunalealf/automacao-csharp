@@ -103,6 +103,42 @@ namespace Correios
 #line 10
   testRunner.Then("eu recebo a mensagem \"Dados não encontrado\"", ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "Então ");
 #line hidden
+#line 11
+  testRunner.And("ao clicar no link \"CEP ou Endereço\"", ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "E ");
+#line hidden
+#line 12
+  testRunner.Then("retorna para a tela inicial de busca CEP", ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "Então ");
+#line hidden
+            }
+            this.ScenarioCleanup();
+        }
+        
+        [NUnit.Framework.TestAttribute()]
+        [NUnit.Framework.DescriptionAttribute("Voltar a tela inicial de busca CEP")]
+        public void VoltarATelaInicialDeBuscaCEP()
+        {
+            string[] tagsOfScenario = ((string[])(null));
+            System.Collections.Specialized.OrderedDictionary argumentsOfScenario = new System.Collections.Specialized.OrderedDictionary();
+            TechTalk.SpecFlow.ScenarioInfo scenarioInfo = new TechTalk.SpecFlow.ScenarioInfo("Voltar a tela inicial de busca CEP", null, tagsOfScenario, argumentsOfScenario, featureTags);
+#line 15
+ this.ScenarioInitialize(scenarioInfo);
+#line hidden
+            if ((TagHelper.ContainsIgnoreTag(tagsOfScenario) || TagHelper.ContainsIgnoreTag(featureTags)))
+            {
+                testRunner.SkipScenario();
+            }
+            else
+            {
+                this.ScenarioStart();
+#line 16
+  testRunner.Given("que ao estar na tela do CEP que não foi encontrado", ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "Dado ");
+#line hidden
+#line 17
+  testRunner.And("clicar no link \"CEP ou Endereço\"", ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "E ");
+#line hidden
+#line 18
+  testRunner.Then("retorna para a tela inicial de busca ao CEP", ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "Então ");
+#line hidden
             }
             this.ScenarioCleanup();
         }

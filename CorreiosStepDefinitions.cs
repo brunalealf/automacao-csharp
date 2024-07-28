@@ -1,3 +1,4 @@
+using NUnit.Framework;
 using OpenQA.Selenium;
 using OpenQA.Selenium.Chrome;
 using TechTalk.SpecFlow;
@@ -11,6 +12,12 @@ namespace Correios
         public CorreiosStepDefinitions()
         {
             _driver = new ChromeDriver();
+        }
+
+        [TearDown]
+        public void TearDown()
+        {
+            _driver.Dispose();
         }
 
         [Given(@"que estou na página ""(.*)""")]
@@ -38,11 +45,23 @@ namespace Correios
         public void ThenIgetamessageDadosnoencontrado(string expectedResult)
         {
             string result = _driver.FindElementByXPath("/html/body/div[1]/div[3]/div[2]/div/div/div[2]/div[2]/div[2]/p").Text;
-            Console.WriteLine(result);
-            Console.WriteLine($"expected result > {expectedResult}");
-            // TODO precisa haver um assert aqui
-            _driver.Dispose();
+
+            Assert.That(result, Is.EqualTo(expectedResult));
         }
+
+        [Then(@"ao clicar no link ""(.*)""")]
+        public void ThenAoClicarNoLink(string menuLink)
+        {
+            _driver.FindElementByLinkText(menuLink);
+        }
+
+        [Then(@"retorna para a tela inicial de busca CEP")]
+        public void ThenRetornaParaATelaInicialDeBuscaCEP()
+        {
+            IWebElement el = _driver.FindElementByName("relaxation");
+            Assert.That(el != null);
+        }
+
 
     }
 }
