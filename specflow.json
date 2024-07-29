@@ -6,6 +6,14 @@
     "feature": "pt"
   },
   "unitTestProvider": {
-    "name":  "NUnit"
+    "name": "NUnit"
+  },
+  "runtime": {
+    "execution": {
+      "parallel": {
+        "testThreadCount": 4,
+        "testSchedulingMode": "MethodLevel"
+      }
+    }
   }
 }

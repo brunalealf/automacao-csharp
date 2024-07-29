@@ -8,6 +8,7 @@ using TechTalk.SpecFlow;
 namespace Correios
 {
     [Binding]
+    [Parallelizable(ParallelScope.Fixtures)]
     public class CorreiosStepDefinitions
     {
         private ChromeDriver _driver;
