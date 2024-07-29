@@ -74,12 +74,12 @@ namespace Correios
         }
         
         [NUnit.Framework.TestAttribute()]
-        [NUnit.Framework.DescriptionAttribute("Pesquisar Endereço")]
-        public void PesquisarEndereco()
+        [NUnit.Framework.DescriptionAttribute("Busca CEP 807000000")]
+        public void BuscaCEP807000000()
         {
             string[] tagsOfScenario = ((string[])(null));
             System.Collections.Specialized.OrderedDictionary argumentsOfScenario = new System.Collections.Specialized.OrderedDictionary();
-            TechTalk.SpecFlow.ScenarioInfo scenarioInfo = new TechTalk.SpecFlow.ScenarioInfo("Pesquisar Endereço", null, tagsOfScenario, argumentsOfScenario, featureTags);
+            TechTalk.SpecFlow.ScenarioInfo scenarioInfo = new TechTalk.SpecFlow.ScenarioInfo("Busca CEP 807000000", null, tagsOfScenario, argumentsOfScenario, featureTags);
 #line 6
  this.ScenarioInitialize(scenarioInfo);
 #line hidden
@@ -91,8 +91,8 @@ namespace Correios
             {
                 this.ScenarioStart();
 #line 7
-  testRunner.Given("que estou na página \"https://www2.correios.com.br/sistemas/buscacep/buscaCepEnder" +
-                        "eco.cfm\"", ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "Dado ");
+  testRunner.Given("que ao acessar o site \"https://www2.correios.com.br/sistemas/buscacep/buscaCepEnd" +
+                        "ereco.cfm\"", ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "Dado ");
 #line hidden
 #line 8
   testRunner.When("eu digito o CEP 807000000 no campo CEP correto", ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "Quando ");
@@ -102,12 +102,6 @@ namespace Correios
 #line hidden
 #line 10
   testRunner.Then("eu recebo a mensagem \"Dados não encontrado\"", ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "Então ");
-#line hidden
-#line 11
-  testRunner.And("ao clicar no link \"CEP ou Endereço\"", ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "E ");
-#line hidden
-#line 12
-  testRunner.Then("retorna para a tela inicial de busca CEP", ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "Então ");
 #line hidden
             }
             this.ScenarioCleanup();
@@ -120,7 +114,7 @@ namespace Correios
             string[] tagsOfScenario = ((string[])(null));
             System.Collections.Specialized.OrderedDictionary argumentsOfScenario = new System.Collections.Specialized.OrderedDictionary();
             TechTalk.SpecFlow.ScenarioInfo scenarioInfo = new TechTalk.SpecFlow.ScenarioInfo("Voltar a tela inicial de busca CEP", null, tagsOfScenario, argumentsOfScenario, featureTags);
-#line 15
+#line 13
  this.ScenarioInitialize(scenarioInfo);
 #line hidden
             if ((TagHelper.ContainsIgnoreTag(tagsOfScenario) || TagHelper.ContainsIgnoreTag(featureTags)))
@@ -130,14 +124,134 @@ namespace Correios
             else
             {
                 this.ScenarioStart();
+#line 14
+  testRunner.Given("que ao acessar o site \"https://www2.correios.com.br/sistemas/buscacep/buscaCepEnd" +
+                        "ereco.cfm\"", ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "Dado ");
+#line hidden
+#line 15
+  testRunner.And("eu digito o CEP 807000000 no campo CEP correto", ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "E ");
+#line hidden
 #line 16
-  testRunner.Given("que ao estar na tela do CEP que não foi encontrado", ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "Dado ");
+  testRunner.And("eu clico no botão \"Buscar\"", ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "E ");
 #line hidden
 #line 17
-  testRunner.And("clicar no link \"CEP ou Endereço\"", ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "E ");
+  testRunner.And("eu recebo a mensagem \"Dados não encontrado\"", ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "E ");
 #line hidden
 #line 18
+  testRunner.When("clicar no menu \"CEP ou Endereço\"", ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "Quando ");
+#line hidden
+#line 19
   testRunner.Then("retorna para a tela inicial de busca ao CEP", ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "Então ");
+#line hidden
+            }
+            this.ScenarioCleanup();
+        }
+        
+        [NUnit.Framework.TestAttribute()]
+        [NUnit.Framework.DescriptionAttribute("Busca CEP 01013001")]
+        public void BuscaCEP01013001()
+        {
+            string[] tagsOfScenario = ((string[])(null));
+            System.Collections.Specialized.OrderedDictionary argumentsOfScenario = new System.Collections.Specialized.OrderedDictionary();
+            TechTalk.SpecFlow.ScenarioInfo scenarioInfo = new TechTalk.SpecFlow.ScenarioInfo("Busca CEP 01013001", null, tagsOfScenario, argumentsOfScenario, featureTags);
+#line 22
+ this.ScenarioInitialize(scenarioInfo);
+#line hidden
+            if ((TagHelper.ContainsIgnoreTag(tagsOfScenario) || TagHelper.ContainsIgnoreTag(featureTags)))
+            {
+                testRunner.SkipScenario();
+            }
+            else
+            {
+                this.ScenarioStart();
+#line 23
+  testRunner.Given("que ao acessar o site \"https://www2.correios.com.br/sistemas/buscacep/buscaCepEnd" +
+                        "ereco.cfm\"", ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "Dado ");
+#line hidden
+#line 24
+  testRunner.When("eu digito o CEP 01013001 no campo CEP correto", ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "Quando ");
+#line hidden
+#line 25
+  testRunner.And("eu clico no botão \"Buscar\"", ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "E ");
+#line hidden
+#line 26
+  testRunner.Then("eu vejo na tabela de resultados \"Rua Quinze de Novembro - lado ímpar\"", ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "Então ");
+#line hidden
+            }
+            this.ScenarioCleanup();
+        }
+        
+        [NUnit.Framework.TestAttribute()]
+        [NUnit.Framework.DescriptionAttribute("Voltar a tela inicial")]
+        public void VoltarATelaInicial()
+        {
+            string[] tagsOfScenario = ((string[])(null));
+            System.Collections.Specialized.OrderedDictionary argumentsOfScenario = new System.Collections.Specialized.OrderedDictionary();
+            TechTalk.SpecFlow.ScenarioInfo scenarioInfo = new TechTalk.SpecFlow.ScenarioInfo("Voltar a tela inicial", null, tagsOfScenario, argumentsOfScenario, featureTags);
+#line 29
+ this.ScenarioInitialize(scenarioInfo);
+#line hidden
+            if ((TagHelper.ContainsIgnoreTag(tagsOfScenario) || TagHelper.ContainsIgnoreTag(featureTags)))
+            {
+                testRunner.SkipScenario();
+            }
+            else
+            {
+                this.ScenarioStart();
+#line 30
+  testRunner.Given("que ao acessar o site \"https://www2.correios.com.br/sistemas/buscacep/buscaCepEnd" +
+                        "ereco.cfm\"", ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "Dado ");
+#line hidden
+#line 31
+  testRunner.And("eu digito o CEP 01013001 no campo CEP correto", ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "E ");
+#line hidden
+#line 32
+  testRunner.And("eu clico no botão \"Buscar\"", ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "E ");
+#line hidden
+#line 33
+  testRunner.And("eu vejo na tabela de resultados \"Rua Quinze de Novembro - lado ímpar\"", ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "E ");
+#line hidden
+#line 34
+  testRunner.When("clicar no logo dos Correios", ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "Quando ");
+#line hidden
+#line 35
+  testRunner.Then("retorna para a tela inicial do site dos Correios", ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "Então ");
+#line hidden
+            }
+            this.ScenarioCleanup();
+        }
+        
+        [NUnit.Framework.TestAttribute()]
+        [NUnit.Framework.DescriptionAttribute("Rastreio com código")]
+        public void RastreioComCodigo()
+        {
+            string[] tagsOfScenario = ((string[])(null));
+            System.Collections.Specialized.OrderedDictionary argumentsOfScenario = new System.Collections.Specialized.OrderedDictionary();
+            TechTalk.SpecFlow.ScenarioInfo scenarioInfo = new TechTalk.SpecFlow.ScenarioInfo("Rastreio com código", null, tagsOfScenario, argumentsOfScenario, featureTags);
+#line 38
+ this.ScenarioInitialize(scenarioInfo);
+#line hidden
+            if ((TagHelper.ContainsIgnoreTag(tagsOfScenario) || TagHelper.ContainsIgnoreTag(featureTags)))
+            {
+                testRunner.SkipScenario();
+            }
+            else
+            {
+                this.ScenarioStart();
+#line 39
+  testRunner.Given("que ao acessar o site \"https://rastreamento.correios.com.br/app/index.php\"", ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "Dado ");
+#line hidden
+#line 40
+  testRunner.And("digitar o código de rastreamento \"SS987654321BR\"", ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "E ");
+#line hidden
+#line 41
+  testRunner.When("eu clico para consultar rastreio", ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "Quando ");
+#line hidden
+#line 42
+  testRunner.Then("retorna uma mensagem informando \"Preencha o campo captcha\"", ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "Então ");
+#line hidden
+#line 43
+  testRunner.And("fechar a aba do browser", ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "E ");
 #line hidden
             }
             this.ScenarioCleanup();
